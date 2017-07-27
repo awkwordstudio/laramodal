@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Awkwordstudio\\Laramodal": "src/"
+            "Awkwordstudio\\Laramodal\\": "src/"
         }
     },
     "minimum-stability": "dev"
