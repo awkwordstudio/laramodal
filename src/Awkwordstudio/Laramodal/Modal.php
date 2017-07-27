@@ -1,4 +1,4 @@
-<?php	namespace Awkwordstudio\Larmodal;
+<?php	namespace Awkwordstudio\Laramodal;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Support\Collection;
@@ -34,7 +34,7 @@ class Modal
 	public function __construct()
 	{
 		$this->options = new Collection;
-		$this->setOption('id' , 'bootmodal_'.md5(time()) );
+		$this->setOption('id' , 'laramodal_'.md5(time()) );
 		$this->setOption('animation' , true );
 		$this->setOption('size' , '' ); // - (for noraml), lg or sm
 		$this->setOption('title' , '' );
@@ -175,7 +175,7 @@ class Modal
      */
 	protected function render($view, $data = array(), $mergeData = array() )
 	{
-		$data['bootmodal'] = $this;
+		$data['laramodal'] = $this;
 		
 		return \View::make( $view, $data , $mergeData );
 	}

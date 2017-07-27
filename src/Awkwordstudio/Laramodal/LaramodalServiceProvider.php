@@ -11,9 +11,12 @@ class LaramodalServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
+		//publish directory
 		 $this->publishes([
 				__DIR__.'/assets' => public_path('vendor/laramodal'),
 			], 'public');
+	    //load views
+		$this->loadViewsFrom(__DIR__.'/path/to/views', 'laramodal');
 	}
 	
 	
@@ -25,11 +28,11 @@ class LaramodalServiceProvider extends ServiceProvider {
 	public function register()
 	{
 
-		$this->app->singleton(Laramodal::class, function () {
-            return new Laramodal();
+		$this->app->singleton(Modal::class, function () {
+            return new Modal();
         });
 
-		$this->app->alias(Laramodal::class, 'awkwordstudio.laramodal');
+		$this->app->alias(Modal::class, 'awkwordstudio.laramodal');
 
 	}
 
