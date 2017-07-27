@@ -1,4 +1,4 @@
-<?php namespace Awkwordstudio\laramodal\Facades;
+<?php namespace Awkwordstudio\Laramodal\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

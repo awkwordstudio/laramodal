@@ -11,7 +11,9 @@ class LaramodalServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('awkwordstudio/laramodal');
+		 $this->publishes([
+				__DIR__.'/assets' => public_path('vendor/laramodal'),
+			], 'public');
 	}
 	
 	
