@@ -10,9 +10,9 @@
         "illuminate/support": "5.5.*"
     },
     "autoload": {
-        "psr-0": {
-            "Torgheh\\Bootmodal": "src/"
+        "psr-4": {
+            "Awkwordstudio\\Laramodal": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
