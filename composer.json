@@ -1,0 +1,18 @@
+{
+    "name": "awkwordstudio/laramodal",
+    "description": "",
+    "authors": [{
+        "name": "Awkword Studio",
+        "email": "awkword.studio@gmail.com"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Torgheh\\Bootmodal": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
