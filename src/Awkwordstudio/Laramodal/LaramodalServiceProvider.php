@@ -16,7 +16,7 @@ class LaramodalServiceProvider extends ServiceProvider {
 				__DIR__.'/assets' => public_path('vendor/laramodal'),
 			], 'public');
 	    //load views
-		$this->loadViewsFrom(__DIR__.'/path/to/views', 'laramodal');
+		$this->loadViewsFrom(__DIR__.'/views', 'laramodal');
 	}
 	
 	
