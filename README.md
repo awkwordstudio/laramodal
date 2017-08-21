@@ -18,27 +18,27 @@ Then run the `composer update`.
 
 Add the Bootmodal service provider to the `providers` array in `app/cofig/app.php`:
 ```php
-	'Torgheh\Bootmodal\BootmodalServiceProvider'
+	'Awkwordstudio\Laramodal\LaramodalServiceProvider::class,'
 ```
 
 Next under the `aliases` array in  `app/cofig/app.php`, you may add the Modal facade.
 ```php
-	'Modal'  => 'Torgheh\Bootmodal\Facades\Modal',
+	'Modal'  => 'Awkwordstudio\Laramodal\Facades\Modal',
 
 ```
 Finally to move the package Javascript asset to the public folder run the follwoing command.
 
 ```sh
-php artisan asset:publish torgheh/bootmodal
+php artisan asset:publish Awkwordstudio/Laramodal
 ```
 The Javascript plugin must be added to the front-end layout.1
 ```html
-<script src="{{asset('packages/torgheh/bootmodal/bootmodal.js')}}" ></script>
+
 ```
 ## Backend
 ### Modal
 In your controller the same way you make views in Laravel you can make modal views and return an Ajax response. 
-The view should extend the default `Bootmodal::layout`.
+The view should extend the default `Laramodal::layout`.
 
 ```php
 return \Modal::make('dialogs.login')->with('data', $data);
@@ -80,7 +80,7 @@ The view extends on the `bootmodal::layout`. There are three sections in a Boots
 ## Frontend
 
 ```html
-<script src="{{asset('packages/torgheh/bootmodal/bootmodal.js')}}" ></script>
+<script src="{{asset('packages/torgheh/bootmodal/laramodal.js')}}" ></script>
 ```
 
 ### Data attributes
@@ -89,25 +89,25 @@ You can bind two types of events to your HTML elements that will trigger the Boo
 
 #### Click:
 ```html
-<a href="#" data-action="{{url('login')}}" data-toggle="bootmodal">Login</a>
+<a href="#" data-action="{{url('login')}}" data-toggle="laramodal">Login</a>
 ```
 This will create and show a modal dialog directed through `data-action` attributes.
 
 #### Sumbit:
 
 ```html
-<form action="{{url('login')}} method="post" data-toggle="bootmodal">
+<form action="{{url('login')}} method="post" data-toggle="laramodal">
 ```
 This will send an Ajax post request to the `action` attribute.
 
-Two data attributes are necessary, `data-toggle="bootmodal"` and `data-action` for buttons.
+Two data attributes are necessary, `data-toggle="laramodal"` and `data-action` for buttons.
 
 ### JavaScript
 
-You can also enable bootmodal through Javascript for forms and buttons.
+You can also enable laramodal through Javascript for forms and buttons.
 ```js
-$('#login-button').bootmodal();
-$('#login-form').bootmodal();
+$('#login-button').laramodal();
+$('#login-form').laramodal();
 ```
 
 ### Options
@@ -115,8 +115,8 @@ $('#login-form').bootmodal();
 There are only two options available, the modal container which is the HTML `body` and Ajax cache option which is `false`, both by default.
 
 ```js
-$('#edit-button').bootmodal({ container: $('#modal-container') });
-$('#tos-button').bootmodal({ cache: true });
+$('#edit-button').laramodal({ container: $('#modal-container') });
+$('#tos-button').laramodal({ cache: true });
 ```
 
 ## Example
@@ -124,7 +124,7 @@ $('#tos-button').bootmodal({ cache: true });
 ### View
 views/dialogs/login.blade.php
 ```php
-@extends('bootmodal::layout')
+@extends('laramodal::layout')
 @section('modal-content')
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
