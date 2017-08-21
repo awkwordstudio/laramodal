@@ -1,6 +1,6 @@
 # Laravel Bootstrap Modal
 
-Bootmodal makes it easier for Laravel (currently only for Laravel 4.2) back-end and front-end developers to use Bootstrap modals. 
+Laramodal makes it easier for Laravel (currently only for Laravel 5.5*) back-end and front-end developers to use Bootstrap modals. 
 In administration interfaces modal dialogs are widely used but implementing them is always 
 time consuming and involves lots of repetition especially if the requests are made through AJAX.   
 Bootmodal Laravel package provides back-end and front-end classes and plug-ins to accelerate this process.
@@ -10,7 +10,7 @@ Bootmodal Laravel package provides back-end and front-end classes and plug-ins t
 ### Composer
 ```sh
 "require": {
-    "torgheh/bootmodal": "v0.1.0"
+    "awkwordstudio/laramodal": "v0.1.0"
 }
 ```
 Then run the `composer update`.
@@ -191,7 +191,7 @@ Route::post('login', array( 'uses'=>'AuthController@postLogin') );
 ### front-end
 
 ```html
-<a href="#" data-action="{{url('login')}}" data-toggle="bootmodal">Login</a>
+<a href="#" data-action="{{url('login')}}" data-toggle="laramodal">Login</a>
 ```
 
 
