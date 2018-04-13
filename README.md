@@ -29,10 +29,6 @@ Finally to move the package Javascript asset to the public folder run the follow
 php artisan asset:publish Awkwordstudio/Laramodal
 
 ```
-The Javascript plugin must be added to the front-end layout.1
-```html
-
-```
 ## Frontend
 
 ```html
